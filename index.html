@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>lev3_5 Morse Code</title>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<main>
+			<div>
+				<form action="" onsubmit="return false">
+					<textarea
+						name=""
+						id="inputText"
+						oninput="encrypt()"
+						maxlength="100"
+						placeholder="Zu übersetzenden Text eingeben (maximal 100 Zeichen)"
+					></textarea>
+					<!-- <button>Encrypt</button> -->
+				</form>
+				<p id="outputText"></p>
+			</div>
+			<div>
+				<h2 id="explanation"></h2>
+				<div id="outputExplanation"></div>
+			</div>
+		</main>
+		<footer>
+			<div id="anzeigeBuchstaben">
+            </div>
+			<div id="anzeigeMorse"></div>
+		</footer>
+
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
