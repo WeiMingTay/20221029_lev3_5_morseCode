@@ -2,46 +2,49 @@
 Allgemein
 ========== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 :root {
-    --primaryColour: #1C2227;
-    --secondaryColour:#F6F1EB;
-    --accentColour: #C99E57;
-    --margin: 1rem;
+	--primaryColour: #1c2227;
+	--secondaryColour: #f6f1eb;
+	--accentColour: #c99e57;
+	--margin: 1rem;
 }
 body {
-    padding: 2rem;
-    background-image: url(../img/photo-1623008946129-2dbc4188f2e7.avif);
-    background-size: cover;
-    height: 100vh;
+	padding: 2rem;
+	background-image: url(../img/photo-1623008946129-2dbc4188f2e7.avif);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100vw;
 }
 
 /* ==========
 Main
 ========== */
 main {
-    background-color: var(--secondaryColour);
-    color: var(--primaryColour);
-    padding: 1rem;
-    max-height: 100vh;
-    overflow: hidden;
+	background-color: var(--secondaryColour);
+	color: var(--primaryColour);
+	padding: 1rem;
+	max-height: 100vh;
+	overflow: hidden;
 }
 
 form {
-    margin: var(--margin) auto;
+	margin: var(--margin) auto;
 }
 textarea {
-    width: 100%;
+	width: 100%;
 }
 #outputExplanation {
-    display: grid;
-    grid-template-rows: repeat(12, 1fr);
-    grid-template-columns: repeat(10,1fr);
-    grid-auto-flow: column;
-    max-height: 100%;
+	display: grid;
+	grid-template-rows: repeat(12, 1fr);
+	grid-template-columns: repeat(10, 1fr);
+	grid-auto-flow: column;
+	max-height: 100%;
 }
 /* #outputExplanation p {
     padding-left: 1rem;
@@ -51,26 +54,45 @@ textarea {
 Footer
 ========== */
 footer {
-    height: 15vh;
-    width: 100vw;
-    background-color: var(--secondaryColour);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
+	width: 100%;
+	background-color: var(--secondaryColour);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
 }
 footer div {
-    display: grid;
-    grid-template-columns: repeat(37, 1fr);
+	display: grid;
+	grid-template-columns: repeat(37, 1fr);
 }
 footer p {
-    border: 1px solid var(--accentColour);
-    border-top: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	border: 1px solid var(--accentColour);
+	border-top: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 footer div:nth-of-type(2) p {
-    writing-mode: vertical-lr;
+	writing-mode: vertical-lr;
+}
+
+/* ==========
+media queries
+========== */
+@media (max-width: 650px) {
+	body {
+		padding: 0.2rem;
+	}
+	#outputExplanation {
+		grid-template-rows: repeat(15, 1fr);
+		grid-template-columns: repeat(5, 1fr);
+	}
+	footer div {
+		grid-template-columns: repeat(19, 1fr);
+	}
+    footer div:nth-of-type(2) {
+        margin-top: .5rem;
+        border-top: 1px solid var(--accentColour);;
+    }
 }
